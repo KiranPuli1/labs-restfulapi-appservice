@@ -63,7 +63,7 @@ public class WeatherController : ControllerBase
 
         return weather;
     }
-[HttpPut("{id}")]
+    [HttpPut("{id}")]
     public ActionResult<Weather> UpdateWeather(int id, Weather weather)
     {
         if (weatherContext.Weather == null)
@@ -84,7 +84,7 @@ public class WeatherController : ControllerBase
  
         return weather;
     }
-    HttpDelete("{id}")]
+    [HttpDelete("{id}")]
     public ActionResult<Weather> DeleteWeather(int id)
     {
         if (weatherContext.Weather == null)
